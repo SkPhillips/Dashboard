@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #A5B2D3;
+    padding: .5em;
+    height: 100vh;
+    text-align:center;
+    background: #303A52;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: .5em;
+}
+
+header svg {
+    width: 1.5em;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a.logo {
+    font-weight: bold;
+    margin: 0 1em;
+}
+
+
+
+a.cta-btn {
+    margin-left: auto;
+    background: #FC85AE;
+    padding: .2em .4em;
+    display: inline-block;
+    border-radius: .2em;
+    font-size: .9em;
+    color: #303A52;
+    font-weight: bold;
+}
+
+a.cta-btn:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* Navigation */
+
+
+nav {
+    position: fixed;
+    z-index: 10;
+    background: #2C354A;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 79%;
+    visibility: hidden;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .3s;
+    text-align: left;
+}
+
+
+nav p {
+    margin-bottom: 0;
+}
+
+nav svg {
+    cursor: pointer;
+    width: 1em;
+}
+
+nav ul li a {
+    display: block;
+    font-size: 1.2em;
+    padding: .8em 1em;
+}
+
+nav ul li a:hover {
+    color: rgb(223, 180, 248);
+}
+
+.selected {
+    background: #9E579D;
+}
+
+.open-nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Main Section */
+
+
+h1 {
+    color: white;
+    margin-top: 1em;
+}
+
+.panel {
+    background: #39445F;
+    border-radius: .3em;
+    padding: .5em 1em;
+    margin-bottom: 2em;
+}
+
+h3 {
+    color: #FC85AE;
+    margin: 0;
+}
+
+ul.data li p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin: .3em 0 1em;
+}
+
+ul.data li:last-child p {
+    margin-bottom: 0;
+}
+ul.secondary {
+    margin-top: 2em;
+}
+ul.secondary li p {
+    font-size: 1.3em;
+}
+
+.inner-wrapper {
+    padding: 1em;
+}
+
+
+/* Large Phones */
+
+@media (min-width:  600px) {
+    
+    body{
+        padding: 1em;
+    }
+    
+    nav {
+        width: 45%;
+    }
+    .info-p {
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    .inner-panel {
+        margin: auto;
+        max-width: 500px;
+        padding: 1em 0;
+    }
+
+    .amount-bottom{
+        font-size: 1.2em;
+    }
+    
+    
+    .panel{
+        padding: 1em 0em;
+        
+    }
+ 
+    .tag {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        margin: 0 2em;
+        position: relative;
+        z-index: 2;
+    }
+
+    .amount{
+        padding: 0 2em;
+        font-size: 1rem;
+    }
+    
+    ul.data li p.amount {
+       display: flex;
+       justify-content: flex-end;
+       margin-top: 0;
+    }
+    
+    .tag:after{  
+        left: 40px;
+        top: 13px;
+        z-index: -1;
+        position: absolute;
+        content: '';
+        border-bottom: 20px solid pink;
+        width: 100px;
+        display: block;
+        opacity: .2;
+    }
+    
+    .secondary {
+        column-count: 2;
+        max-width: 600px;
+        margin: auto;
+    }
+    
+    .secondary li {
+        padding: 1em;
+    }
+    
+    .secondary li:nth-child(4){
+        padding-bottom: 2.2em;
+    }
+}
+
+@media (min-width: 750px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    nav {
+        width: 25%;
+    }
+
+    .inner-wrapper {
+        padding-top: 2em;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    header .cta-btn {
+        font-size: 1.1rem;
+    }
+    
+    
+    .inner-panel {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        max-width: 1800px;
+    }
+
+    .amount{
+        padding-top: 2em;
+        font-size: 1rem;
+    }
+
+    .amount-bottom{
+        font-size: 1.3em;
+    }
+    
+
+    .info-p {
+        padding: 2em;
+    }
+
+    .section-title{
+        font-size: 1.3rem;
+    }
+
+}
+
+@media (min-width: 1050px) {
+    
+    .inner-panel li{
+        margin: 0 2em;
+    }
+}
+
+@media (min-width: 1500px){
+    body {
+        padding: 1.5em;
+    }
+
+     .cta-btn {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+}
