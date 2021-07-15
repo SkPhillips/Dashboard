@@ -1,4 +1,4 @@
-// javascript
+
 
 const get = element => document.getElementById(element);
 
@@ -15,12 +15,9 @@ exit.addEventListener('click', () => {
 })
 
 
-// show viewport width
 
 let width = document.getElementById('width');
 var onresize = function () {
-    //your code here
-    //this is just an example
     width.innerText = document.body.clientWidth;
     width.classList.add('display-width');
     setTimeout(() => {
